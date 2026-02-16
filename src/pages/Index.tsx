@@ -5,7 +5,7 @@ import PageLayout from '@/components/layout/PageLayout';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2, Users, Zap, ShieldCheck, TrendingUp } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Users, Zap, ShieldCheck, TrendingUp, Cpu } from 'lucide-react';
 
 const Index = () => {
   const stats = [
