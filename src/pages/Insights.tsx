@@ -5,6 +5,7 @@ import PageLayout from '@/components/layout/PageLayout';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Download } from 'lucide-react';
+import { showSuccess } from '@/utils/toast';
 
 const Insights = () => {
   const posts = [
@@ -27,6 +28,10 @@ const Insights = () => {
       image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
     }
   ];
+
+  const handleDownload = () => {
+    showSuccess("Your report download has started!");
+  };
 
   return (
     <PageLayout>
@@ -71,7 +76,10 @@ const Insights = () => {
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-[#001F3F]">Download Our 2024 Talent Report</h2>
                 <p className="text-lg text-slate-600">A comprehensive analysis of executive compensation and talent movement across Healthcare, Tech, and FMCG in India.</p>
-                <Button className="bg-[#00BFFF] hover:bg-[#0099CC] text-white rounded-full px-10 py-7 text-lg">
+                <Button 
+                  onClick={handleDownload}
+                  className="bg-[#00BFFF] hover:bg-[#0099CC] text-white rounded-full px-10 py-7 text-lg"
+                >
                   Download Report <Download className="ml-2 w-5 h-5" />
                 </Button>
               </div>
